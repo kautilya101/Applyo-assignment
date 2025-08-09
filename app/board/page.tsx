@@ -98,7 +98,7 @@ export default function BoardPage() {
 
 	if (loading) {
 		return (
-			<div className="max-w-7xl h-screen mx-auto p-6">
+			<div className="max-w-7xl h-full mx-auto p-6">
 				<div className="flex items-center justify-center min-h-[400px]">
 					<div className="text-center space-y-2">
 						<div className="animate-spin rounded-full h-8 w-8 border-b-2 border-gray-900 mx-auto"></div>
@@ -110,7 +110,7 @@ export default function BoardPage() {
 	}
 
 	return (
-		<main className="min-h-screen p-6 w-full">
+		<main className="h-full p-6 w-full">
 			<div className="max-w-7xl mx-auto">
 				<div className="mb-8">
 					<div className="flex items-center justify-between">

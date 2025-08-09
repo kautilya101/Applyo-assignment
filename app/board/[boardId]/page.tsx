@@ -9,7 +9,7 @@ export default async function BoardItemPage ({params}: {params: Promise<{boardId
   }
 
   return (
-    <main className="h-screen w-full">
+    <main className="h-full w-full">
       <TodoList boardId={boardId} />
     </main>
   )
