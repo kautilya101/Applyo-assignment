@@ -29,19 +29,19 @@ export default async function RootLayout({
   children: React.ReactNode;
 }>) {
   const cookieStore = await cookies();
-  const token = cookieStore.get('token')?.value
+  const token = cookieStore.get("token")?.value;
   const user = token ? await verifyJWT(token) : null;
 
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased flex flex-col min-h-screen`}
       >
         <TooltipProvider delayDuration={300}>
-          <Navbar user={user as {email: string, id: string}} />
-          <GradientBackground>
-            {children}
-          </GradientBackground>
+          <Navbar user={user as { email: string; id: string }} />
+          <main className="flex flex-1 flex-col">
+            <GradientBackground>{children}</GradientBackground>
+          </main>
           <Toaster position="top-center" />
         </TooltipProvider>
       </body>
