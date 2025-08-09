@@ -1,6 +1,11 @@
 # 📌 Project Name
 A simple task board and todo management app built with **Next.js App Router**, featuring authentication, server actions, and in-memory storage.
 
+Already created some tasks in given account
+- Sample Credentials: (for ease in testing)
+- Username: kautilya@gmail.com
+- Password: #12Kautilya
+
 ## 🚀 Tech Stack
 - **Next.js** (App Router)
 - **React.js**
