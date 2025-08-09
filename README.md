@@ -40,9 +40,9 @@ TodoCard.tsx
 
 ## ▶️ How to Run
 1. **Clone the repository**
-   ```bash
-   git clone https://github.com/your-username/your-repo-name.git
-   cd your-repo-name
+  ```bash
+  git clone https://github.com/your-username/your-repo-name.git
+  cd your-repo-name
   ```
 2. **Install Dependencies**
   ```bash
