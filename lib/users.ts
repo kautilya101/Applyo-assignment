@@ -10,8 +10,7 @@ export const getUsers = async (): Promise<IUser[]> => {
   try {
     const data = await fs.readFile(userFile, "utf-8");
     return JSON.parse(data);
-  } catch (err: any) {
-    if (err.code === "ENOENT") return [];
+  } catch (err) {
     throw err;
   }
 };

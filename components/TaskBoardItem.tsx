@@ -73,7 +73,7 @@ const BoardCard = ({ board, isAccessible, onDelete, onUpdate, onboardClick }: IB
           <div className="text-center">
             <Lock className="mx-auto h-8 w-8 text-gray-400 mb-2" />
             <p className="text-gray-500 font-medium">Not Accessible</p>
-            <p className="text-gray-400 text-sm">You don't have permission to view this board</p>
+            <p className="text-gray-400 text-sm">You don&apos;t have permission to view this board</p>
           </div>
         </div>
         <div className="blur-sm">

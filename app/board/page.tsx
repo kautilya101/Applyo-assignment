@@ -2,20 +2,13 @@
 import React, { useState, useEffect } from "react";
 import {
 	Calendar,
-	Clock,
-	User,
-	Lock,
 	Plus,
-	MoreVertical,
-	CheckCircle2,
-	Circle,
 } from "lucide-react";
 import { ITodoBoardItem } from "@/types/index.types";
 import BoardCard from "@/components/TaskBoardItem";
 import { createTodoBoardItem, deleteTodoBoardItem, getTodoBoardItems, updateTodoBoardItem } from "../actions/board";
 import { Button } from "@/components/ui/button";
 import { CreateBoardDialog } from "@/components/CreateBoardDialog";
-import { get } from "http";
 import { getLoggedInUser } from "@/lib/auth";
 import { redirect } from "next/navigation";
 

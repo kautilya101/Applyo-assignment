@@ -1,4 +1,4 @@
-import { CheckSquare, User } from 'lucide-react';
+import { CheckSquare } from 'lucide-react';
 import Link from 'next/link';
 import React from 'react';
 import { Tooltip, TooltipContent, TooltipTrigger } from './ui/tooltip';

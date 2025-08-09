@@ -7,6 +7,7 @@ import { GradientBackground } from "@/components/GradientBackground";
 import { toast } from "sonner";
 import { useState } from "react";
 import { Eye, EyeOff } from "lucide-react";
+import Link from "next/link";
 
 export default function Login() {
 	const router = useRouter();
@@ -20,7 +21,7 @@ export default function Login() {
 	const handleLogin = async (data: IUser) => {
 		const response = await signInAction(data);
 		if (response.success) {
-			router.push("/board"); // Change to your authenticated route
+			router.push("/board"); 
 		} else {
 			toast.error("Invalid email or password");
 		}
@@ -78,10 +79,10 @@ export default function Login() {
 						</button>
 					</form>
 					<p className="mt-4 text-center text-sm">
-						Don't have an acconut{" "}
-						<a href="/sign-up" className="text-blue-600 hover:underline">
+						Don&apos;t have an acconut{" "}
+						<Link href="/sign-up" className="text-blue-600 hover:underline">
 							Sign Up
-						</a>
+						</Link>
 					</p>
 				</div>
 			</GradientBackground>

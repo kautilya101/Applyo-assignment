@@ -6,11 +6,6 @@ import { IUser } from "@/types/index.types";
 import { GradientBackground } from "@/components/GradientBackground";
 import { toast } from "sonner";
 
-type FormValues = {
-  email: string;
-  password: string;
-};
-
 export default function Register() {
   const router = useRouter();
 
@@ -22,7 +17,7 @@ export default function Register() {
 
   const handleFormSubmit = async (data: IUser) => {
     await signUpAction(data);
-    router.push("/sign-in"); // Redirect to sign-in page after successful registration
+    router.push("/sign-in"); 
     toast.info("Registration successful! Please log in.");
   };
 

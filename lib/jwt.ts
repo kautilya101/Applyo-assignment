@@ -1,3 +1,5 @@
+/* eslint-disable no-console */
+
 import { SignJWT, jwtVerify } from "jose";
 
 const SECRET = new TextEncoder().encode(process.env.SECRET_JWT_KEY || "");
