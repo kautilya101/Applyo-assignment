@@ -2,11 +2,18 @@ import { NextResponse } from "next/server";
 import type { NextRequest } from "next/server";
 import { verifyJWT } from "./lib/jwt";
 
-export function middleware(req: NextRequest) {
+export async function middleware(req: NextRequest) {
   const token = req.cookies.get("token")?.value;
-  const verified = token && verifyJWT(token);
+  const verified = token && await verifyJWT(token);
+  const { pathname } = req.nextUrl;
 
-  if (!verified) {
+  const authPages = ["/sign-in", "/sign-up"];
+
+  if (verified && authPages.includes(pathname)) {
+    return NextResponse.redirect(new URL("/", req.url));
+  }
+
+  if (!verified && pathname.startsWith("/board")) {
     return NextResponse.redirect(new URL("/", req.url));
   }
 
@@ -14,5 +21,5 @@ export function middleware(req: NextRequest) {
 }
 
 export const config = {
-  matcher: ["/"],
+  matcher: ["/board/:path*", "/sign-in", "/sign-up"],
 };
